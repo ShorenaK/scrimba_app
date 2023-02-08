@@ -1,17 +1,10 @@
 const myEmojis = ["💻", "🤩", "🫂"]
 
-// const emojiContainer = document.getElementById("emojiContainer")
+const emojiContainer = document.getElementById("emojiContainer")
+console.log(emojiContainer)
 
-// for (let i = 0; i < myEmojis.length; i ++){
-//     const emojis = document.createElement("span")
-//     emojis.textContent = myEmojis[i]
-//     emojiContainer.appendChild(emojis)
-    
-// }
-
-// console.log(div)
-
-for (let i = 0 ; i < myEmojis.length; i ++){
-    console.log(myEmojis[i])
-
-}
+ for (let i = 0; i < myEmojis.length; i ++){
+   const emojis =  document.createElement("span")
+    emojis.textContent = myEmojis[i]
+    emojiContainer.appendChild(emojis)
+ }
