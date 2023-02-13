@@ -28,3 +28,14 @@ setTimeout(function(){
 modalCloseBtn.addEventListener('click', function(){
     modal.style.display = 'none'
 })
+
+const modal2= document.getElementById('modal_text')
+but.addEventListener('click',function(e){
+    modal.innerHTML = 
+    <div class="modal-inner-loading">
+        <img src="images/loading.svg" class="loading">
+        <p id="uploadText">
+            Uploading your data to the dark web...
+        </p>
+    </div>
+})
