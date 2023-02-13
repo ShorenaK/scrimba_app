@@ -12,8 +12,15 @@ revealBtn.addEventListener('click', function(){
 })
 
 const modal = document.getElementById('modal')
+const loginForm = document.getElementById('login')
 const modalCloseBtn = document.getElementById('modal-close-btn')
  
+
+loginForm.addEventListener("submit", function(e){
+   e.preventDefault()
+   console.log('submited')
+})
+
 setTimeout(function(){
     modal.style.display = 'inline'
 }, 1500)
