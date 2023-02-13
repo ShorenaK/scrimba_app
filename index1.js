@@ -41,5 +41,5 @@ but.addEventListener('click',function(e){
     </div> `
 })
 setTimeout(function(){
-<p id="upload-text">Uploading your data to the dark web...</p>
+document.querySelector('uploadText').innerText = `Making the sale..."`
 },1500 )
