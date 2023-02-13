@@ -32,10 +32,14 @@ modalCloseBtn.addEventListener('click', function(){
 const modal2= document.getElementById('modal_text')
 but.addEventListener('click',function(e){
     modal.innerHTML = 
-    <div class="modal-inner-loading">
+    `<div class="modal-inner-loading">
         <img src="images/loading.svg" class="loading">
         <p id="uploadText">
             Uploading your data to the dark web...
+            
         </p>
-    </div>
+    </div> `
 })
+setTimeout(function(){
+<p id="upload-text">Uploading your data to the dark web...</p>
+},1500 )
