@@ -14,7 +14,13 @@ revealBtn.addEventListener('click', function(){
 const modal = document.getElementById('modal')
 const loginForm = document.getElementById('login')
 const modalCloseBtn = document.getElementById('modal-close-btn')
- 
+const declineBtn = document.getElementById('decline-btn')
+const modalBtns = document.getElementById('modal-choice-btns')
+
+declineBtn.addEventListener('mouseenter', function(){
+    modalBtns.classList.toggle('reverse')
+ })
+
 
 loginForm.addEventListener("submit", function(e){
    e.preventDefault()
