@@ -19,7 +19,12 @@ const modalCloseBtn = document.getElementById('modal-close-btn')
 loginForm.addEventListener("submit", function(e){
    e.preventDefault()
   const loginFormData =  new FormData(loginForm)
-  console.log(loginFormData)
+ const name = loginFormData.get('user')
+ const password = loginFormData.get('password')
+ const email = loginFormData.get('email')
+ console.log(email, password, name)
+
+
 })
 
 setTimeout(function(){
