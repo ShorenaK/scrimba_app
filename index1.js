@@ -18,7 +18,8 @@ const modalCloseBtn = document.getElementById('modal-close-btn')
 
 loginForm.addEventListener("submit", function(e){
    e.preventDefault()
-   console.log('submited')
+  const loginFormData =  new FormData(loginForm)
+  console.log(loginFormData)
 })
 
 setTimeout(function(){
@@ -43,3 +44,4 @@ but.addEventListener('click',function(e){
 setTimeout(function(){
 document.querySelector('uploadText').innerText = `Making the sale..."`
 },1500 )
+
