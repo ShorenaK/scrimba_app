@@ -23,7 +23,6 @@ function getEmotionsArray(cats){
     return emotionsArray
 }
 
-
 // for ( let character of characters){
 //     for (let power of character.powers){   
 //         console.log(power)
