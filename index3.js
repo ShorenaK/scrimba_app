@@ -1,5 +1,5 @@
 
-import {catsData} from './data.js'
+import { catsData } from './data.js'
 // function getEmotionsArray(cats){
 //     const emotionArray = []
 //     for(let i = 0; i < cats.length; i ++){
@@ -9,18 +9,20 @@ import {catsData} from './data.js'
 //     }
 //     console.log(emotionArray)
 // }
-
 // getEmotionsArray(catsData)
-const emotionsArray = []
+const emotionRadios = document.getElementById('emotion-radios')
+
+
 function getEmotionsArray(cats){
+    const emotionsArray = []
     for (let cat of cats){
-        for (emotion of cat.emotionTags){
+        for (let emotion of cat.emotionTags){
             emotionsArray.push(emotion)
         }
     }  
     return emotionsArray
 }
-const emotionRadios = document.getElementById('emotion-radios')
+
 
 // for ( let character of characters){
 //     for (let power of character.powers){   
@@ -33,7 +35,7 @@ function renderEmotionsRadios(cats){
     const emotions = getEmotionsArray(cats)
     
     for (let emotion of emotions){
-        radioItems += `<p>{emotion}<p/>`
+        radioItems += `<p>${emotion}</p>`
     }
         emotionRadios.innerHTML = radioItems
 }
