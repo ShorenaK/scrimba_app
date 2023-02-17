@@ -35,3 +35,11 @@ function render(){
 }
 
 render()
+
+// container.addEventListener('click', function(e){
+    // document.getElementById(e.target.id).parentElement.style.backgroundColor = 'lightblue'// 
+// })
+//  or document.addEventListener('click', function(e){
+    // document.getElementById(e.target.id).parentElement.classList.add('read')
+    // document.getElementById(e.target.id).parentElement.classList.remove('unread')
+// })
