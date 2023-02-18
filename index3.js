@@ -15,10 +15,11 @@ const emotionRadios = document.getElementById('emotion-radios')
 emotionRadios.addEventListener("cahnge", highlightcheckedOption)
 
 function highlightcheckedOption(e){
- const allitem = document.getElementsByClassName('radio')
-for (let item of allitem){
-    item.classList.remove('highlight')
-}
+
+const radios = document.getElementsByClassName('radio')
+    for (let radio of radios){
+        radio.classList.remove('highlight')
+    }
     document.getElementById(e.target.id).perantElement.classList.add('highlight')
 }
 
