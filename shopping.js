@@ -47,3 +47,10 @@ clearBtn.addEventListener('click', function(){
         
     }
 })
+
+// 
+// submitBtn.addEventListener('click', function(){
+//     const radio = document.querySelector('input[type=radio]:checked')
+//     console.log(radio.name)
+//   })
+  
