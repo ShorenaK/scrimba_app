@@ -19,7 +19,6 @@ function highlightcheckedOption(e){
 for (let item of allitem){
     item.classList.remove('highlight')
 }
-
     document.getElementById(e.target.id).perantElement.classList.add('highlight')
 }
 
