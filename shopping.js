@@ -1,45 +1,49 @@
-// const emojis = ['🐥','🐯','🐼']
-// console.log(emojis.includes('🐴'))
+// const container = document.getElementById('container')
+const clearBtn = document.getElementById('clear-btn')
 
-const addItemBtn = document.getElementById('add-item-btn')
-const itemInput = document.getElementById('item-input')
-const list = document.getElementById('list')
-
-const shoppingList = []
-    
-addItemBtn.addEventListener('click', function(){
-/*
-Challenge:
-1. Add an if else to the event listener's function.
-2. Only add an item to the shoppingList array if it 
-   is not already in the shoppingList array.
-3. If an item is a duplicate, clear the input field
-   and log out "no duplicates".
-*/
-        if(shoppingList.includes(itemInput.value)){
-            console.log('no duplicates')
-        }
-        else{
-            shoppingList.push(itemInput.value)
-            render()        
-        }
-        itemInput.value = '' 
-})
-
-function render(){    
-    let html = ''
-    for (let item of shoppingList){
-        html+= `<li class="list-item">${item}</li>`
+const products = [
+    {
+        name: 'Ostrich Pillow',
+        price: '10',
+        image: 'ostrichpillow.jpg',
+        id: 'ostrich-pillow'
+    },
+    {
+        name: 'Bacon Bandages',
+        price: '8',
+        image: 'bacon-bandage.jpg',
+        id: 'bacon-bandages'
+    },
+    {
+        name: 'Baby Mop',
+        price: '20',
+        image: 'babymop.jpg',
+        id: 'baby-mop'
     }
-    list.innerHTML = html
+]
+
+for (let product of products){
+    container.innerHTML += `
+    <div class="product on-offer">
+        <h3>${product.name}</h3>
+        <h4> £${product.price}</h4>
+        <img src="${product.image}">
+        <button id="${product.id}">Buy Now</button>
+    </div>
+    `
 }
 
-render()
+container.addEventListener('click', function(e){
+    document.getElementById(e.target.id).parentElement.classList.add('purchased')
+    document.getElementById(e.target.id).parentElement.classList.remove('on-offer')
+})
 
-// container.addEventListener('click', function(e){
-    // document.getElementById(e.target.id).parentElement.style.backgroundColor = 'lightblue'// 
-// })
-//  or document.addEventListener('click', function(e){
-    // document.getElementById(e.target.id).parentElement.classList.add('read')
-    // document.getElementById(e.target.id).parentElement.classList.remove('unread')
-// })
+clearBtn.addEventListener('click', function(){
+
+    const productsArray = document.getElementsByClassName('product')
+    for (let product of productsArray){
+        product.classList.remove('purchased')
+        product.classList.add('on-offer')
+        
+    }
+})

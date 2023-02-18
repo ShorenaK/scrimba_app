@@ -15,7 +15,7 @@ const emotionRadios = document.getElementById('emotion-radios')
 emotionRadios.addEventListener("cahnge", highlightcheckedOption)
 
 function highlightcheckedOption(e){
-    console.log(e.target.id)
+    document.getElementById(e.target.id).perantElement.classList.add('highlight')
 }
 
 function getEmotionsArray(cats){
