@@ -1,4 +1,3 @@
-
 import { catsData } from './data.js'
 // function getEmotionsArray(cats){
 //     const emotionArray = []
@@ -12,11 +11,11 @@ import { catsData } from './data.js'
 // getEmotionsArray(catsData)
 const emotionRadios = document.getElementById('emotion-radios')
 const getImageBtn = document.getElementById('get-image-btn')
+const gifsOnlyOption = document.getElementById('gifs-only-option')
 
 emotionRadios.addEventListener('change', highlightCheckedOption)
 
 getImageBtn.addEventListener('click', getMatchingCatsArray)
-
 
 function highlightCheckedOption(e){
     const radios = document.getElementsByClassName('radio')
@@ -28,12 +27,15 @@ function highlightCheckedOption(e){
 }
 
 function getMatchingCatsArray(){
+    const isGift = gifsOnlyOption.checked
+    console.log(isGift)
+
+
     if(document.querySelector('input[type="radio"]:checked')){
         const selectedEmotion = document.querySelector('input[type="radio"]:checked').value
         console.log(selectedEmotion)
     }
 }
-
 function getEmotionsArray(cats){
     const emotionsArray = []
     for (let cat of cats){
@@ -45,13 +47,11 @@ function getEmotionsArray(cats){
     }  
     return emotionsArray
 }
-
 // for ( let character of characters){
 //     for (let power of character.powers){   
 //         console.log(power)
 //     }
 // }
-
 function renderEmotionsRadios(cats){
     let radioItems = ``
     const emotions = getEmotionsArray(cats)
