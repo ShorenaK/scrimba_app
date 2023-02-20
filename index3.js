@@ -27,15 +27,20 @@ function highlightCheckedOption(e){
 }
 
 function getMatchingCatsArray(){
-    const isGift = gifsOnlyOption.checked
-    console.log(isGift)
-
+   
 
     if(document.querySelector('input[type="radio"]:checked')){
         const selectedEmotion = document.querySelector('input[type="radio"]:checked').value
-        console.log(selectedEmotion)
+        const isGift = gifsOnlyOption.checked
+
+       const catsDataEmmotion = catsData.filter(function (cat){
+            return cat.emotionTags.includes(selectedEmotion)
+       })
+          console.log(catsDataEmmotion)
     }
 }
+
+
 function getEmotionsArray(cats){
     const emotionsArray = []
     for (let cat of cats){
