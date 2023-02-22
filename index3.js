@@ -62,11 +62,10 @@ function getSingleCatObject(){
 
 function renderCat(){
 const catObject =  getSingleCatObject()
-
 memeModalInner.innerHTML =  `<img 
 class="cat-img" 
-src="./images/CAT IMAGE"
-alt="CAT ALT TEXT"
+src="./images/${catObject.image}"
+alt="${catObject.alt}"
 >`
 memeModal.style.display = 'flex'
 }
